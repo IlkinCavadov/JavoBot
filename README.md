@@ -1,6 +1,6 @@
-# BotForge — AI Customer Support Chatbot Builder
+# JavoBot — AI Customer Support Chatbot Builder
 
-A production-ready, OOP React application for building, configuring, and deploying AI-powered customer support chatbots. Powered by the Anthropic Claude API.
+A production-ready, OOP React application for building, configuring, and deploying AI-powered customer support chatbots. Powered by the Ilkin Javadov Groq API or Anthropic Claude AI
 
 ## Architecture
 
@@ -99,7 +99,7 @@ npm i -g vercel
 vercel --prod
 ```
 
-The Anthropic API key is passed through the browser directly. For production client deployments, proxy the API through a serverless function (Vercel Edge Functions / Netlify Functions) to keep the key server-side.
+The Groq API key is passed through the browser directly. For production client deployments, proxy the API through a serverless function (Vercel Edge Functions / Netlify Functions) to keep the key server-side.
 
 ## Upgrading to multi-user (Supabase)
 
@@ -111,10 +111,4 @@ When a client needs accounts / cross-device sync, the migration is minimal:
 
 The rest of the app is unchanged.
 
-## Freelance pricing guide
 
-| Tier       | Deliverable                             | Price        |
-|------------|------------------------------------------|--------------|
-| Starter    | Config + embed snippet                  | $500         |
-| Pro        | Config + full HTML widget + 10 Q&A pairs | $1,200       |
-| Agency     | Everything + monthly Q&A updates        | $1,200 + $99/mo |
