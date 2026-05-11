@@ -1,0 +1,61 @@
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
+
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+  --font-sans:  'DM Sans',  system-ui, sans-serif;
+  --font-head:  'Syne',     system-ui, sans-serif;
+  --font-mono:  'DM Mono',  monospace;
+
+  --ink:        #0D0D0F;
+  --ink-mid:    #3A3A45;
+  --ink-faint:  #7A7A8C;
+  --bg:         #F7F6F2;
+  --bg-card:    #FFFFFF;
+  --bg-muted:   #F0EFF9;
+  --accent:     #5B4FE8;
+  --accent-lt:  #EAE8FD;
+  --accent-dk:  #3D33B5;
+  --green:      #1DB87A;
+  --green-lt:   #E3F9EF;
+  --red:        #E24B4A;
+  --border:     rgba(0, 0, 0, 0.08);
+  --border-mid: rgba(0, 0, 0, 0.14);
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg:  0 24px 64px rgba(0,0,0,0.14), 0 4px 16px rgba(0,0,0,0.07);
+}
+
+/* ── Base typography ─────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  background:  var(--bg);
+  color:       var(--ink);
+  font-size:   14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 4px; }
+
+/* ── Focus ring ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent) !important; }
+
+/* ── Animations ──────────────────────────────────────────────── */
+@keyframes pulse  { 0%,100%{opacity:1}   50%{opacity:.4}          }
+@keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+@keyframes spin   { to { transform: rotate(360deg); } }
+
+.fade-up { animation: fadeUp 0.2s ease both; }
