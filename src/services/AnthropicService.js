@@ -45,9 +45,9 @@ export class AnthropicService {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": import.meta.env.DEV
-        ? `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`
-        : undefined,
+      ...(import.meta.env.DEV && {
+        "Authorization": `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+      }),
     },
     body: JSON.stringify({
       model:      AI_MODEL,
