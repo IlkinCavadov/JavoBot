@@ -1,8 +1,6 @@
 // ── API ───────────────────────────────────────────────────────
-//export const API_URL  = "/api/groq/openai/v1/chat/completions";
-export const API_URL = import.meta.env.DEV
-  ? "/api/groq/openai/v1/chat/completions"
-  : "/api/groq";
+export const API_URL  = "/api/groq/openai/v1/chat/completions";
+
 export const AI_MODEL = "llama-3.3-70b-versatile";
 export const MAX_TOKENS = 1000;
 
