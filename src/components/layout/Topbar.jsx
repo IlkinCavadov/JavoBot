@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { GhostButton } from "../shared/index.jsx";
 import { APP_NAME }    from "../../constants/index.js";
+import { useTranslation } from "react-i18next";
 
 export function Topbar({ onCreateBot, onExportAll, onImport, onReset }) {
   const fileRef = useRef(null);
+  const { t } = useTranslation();
 
   return (
     <header style={{
@@ -21,16 +23,11 @@ export function Topbar({ onCreateBot, onExportAll, onImport, onReset }) {
       <div style={{ width: 1, height: 20, background: "var(--border)" }} />
       <span style={{ fontSize: 12, color: "var(--ink-faint)", fontWeight: 400 }}>AI Chatbot Builder</span>
 
-      {/* Live badge */}
-      <div style={{ marginLeft: 4, display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "var(--green)", fontWeight: 600 }}>
-        <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--green)", display: "inline-block", animation: "pulse 2s infinite" }} />
-        Live
-      </div>
 
       <div style={{ flex: 1 }} />
 
       {/* Actions */}
-      <GhostButton onClick={onReset} style={{ padding: "5px 10px" }}>↺ Reset chat</GhostButton>
+      <GhostButton onClick={onReset} style={{ padding: "5px 10px" }}>↺ {t("resetBot")}</GhostButton>
 
       <GhostButton onClick={() => fileRef.current?.click()} style={{ padding: "5px 10px" }}>
         ↑ Import
@@ -46,7 +43,7 @@ export function Topbar({ onCreateBot, onExportAll, onImport, onReset }) {
         fontSize: 12, fontWeight: 600, cursor: "pointer",
         fontFamily: "var(--font-head)", letterSpacing: "0.03em",
       }}>
-        + New bot
+        + {t("newBot")}
       </button>
     </header>
   );

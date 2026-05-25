@@ -1,5 +1,6 @@
 // ── API ───────────────────────────────────────────────────────
 //export const API_URL  = "/api/groq/openai/v1/chat/completions";
+
 export const API_URL = import.meta.env.DEV
   ? "/api/groq/openai/v1/chat/completions"
   : "/api/groq";
@@ -48,6 +49,7 @@ export const TABS = [
   { key: "behavior",  label: "Behavior"  },
   { key: "knowledge", label: "Knowledge" },
   { key: "style",     label: "Style"     },
+  { key: "mybots",     label: "My Bots"     },
 ];
 
 // ── Default Q&A seed data ─────────────────────────────────────

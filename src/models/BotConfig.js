@@ -3,7 +3,7 @@ import { DEFAULT_QA } from "../constants/index.js";
 
 /**
  * Complete, immutable configuration for a single chatbot.
- * All setters return new instances — safe to use as React state.
+ * Includes identity, behavior, knowledge, and style fields.
  */
 export class BotConfig {
   constructor({

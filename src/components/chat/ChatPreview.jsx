@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function TypingDots() {
+  const { t } = useTranslation();
+
   return (
     <div style={{ alignSelf: "flex-start", animation: "fadeUp 0.2s ease" }}>
       <div style={{ background: "var(--bg)", border: "1px solid var(--border)", padding: "10px 13px", borderRadius: "16px 16px 16px 3px", display: "flex", gap: 5, alignItems: "center" }}>
@@ -15,6 +18,7 @@ function TypingDots() {
 export function ChatPreview({ config, chatState }) {
   const { messages, isTyping, send, bottomRef } = chatState;
   const [input, setInput] = useState("");
+  const { t } = useTranslation();
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -81,7 +85,7 @@ export function ChatPreview({ config, chatState }) {
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => e.key === "Enter" && handleSend()}
-          placeholder="Type a message…"
+          placeholder={t("inputPlaceholder")}
           style={{ flex: 1, padding: "8px 13px", borderRadius: 22, border: "1px solid var(--border-mid)", fontSize: 13, fontFamily: "var(--font-sans)", background: "var(--bg)", color: "var(--ink)", outline: "none" }}
         />
         <button onClick={handleSend} style={{ width: 34, height: 34, borderRadius: "50%", background: config.primaryColor, border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#fff", fontSize: 14 }}>

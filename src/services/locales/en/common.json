@@ -1,0 +1,75 @@
+{
+  "appName": "JavoBot",
+
+  "identity": "Identity",
+  "behavior": "Behavior",
+  "knowledge": "Knowledge",
+  "style": "Style",
+  "myBots": "My Bots",
+
+  "newBot": "Add new bot",
+  "resetBot": "Reset bot",
+
+
+  "botIdentity": "Bot identity",
+  "botName": "Bot name",
+  "companyBrand": "Company / Brand",
+  "avatarEmoji": "Avatar emoji",
+
+  "messages": "Messages",
+  "welcomeMessage": "Welcome message",
+  "fallbackMessage": "Fallback message",
+
+  "personalityTone": "Personality tone",
+  "customInstructions": "Custom instructions",
+  "quickReplyChips": "Quick reply chips",
+  "options": "Options",
+
+  "collectEmail": "Collect email before chat",
+  "showTyping": "Show typing indicator",
+  "humanHandoffKeyword": "Human handoff keyword",
+
+  "qaPairs": "Q&A pairs",
+  "question": "Question",
+  "answer": "Answer",
+  "remove": "Remove",
+  "addQaPair": "Add Q&A pair",
+
+  "businessContext": "Business context",
+
+  "colors": "Colors",
+  "headerButtons": "Header & buttons",
+  "userBubble": "User bubble",
+  "borderRadius": "Border radius",
+  "widgetPosition": "Widget position",
+
+  "bottomRight": "Bottom right",
+  "bottomLeft": "Bottom left",
+  "centered": "Centered",
+
+  "friendly": "Friendly",
+  "professional": "Professional",
+  "playful": "Playful",
+  "concise": "Concise",
+
+  "trackOrder": "Track my order",
+  "returnPolicy": "Return policy",
+  "contactSupport": "Contact support",
+  "businessHours": "Business hours",
+  "pricing": "Pricing",
+  "bookDemo": "Book a demo",
+
+  "exportJson": "Export JSON",
+  "duplicate": "Duplicate",
+  "delete": "Delete",
+
+  "placeholderBotName": "Aria, Max, Zoe…",
+  "placeholderCompany": "Your company",
+  "placeholderInstructions": "e.g. Always mention 30-day returns. Never discuss competitors.",
+  "placeholderHandoff": "speak to agent",
+  "placeholderBusinessContext": "Describe your business, products, support hours, policies…",
+  "inputPlaceholder": "Type a message…",
+
+  "welcomeDefault": "Hi there! I'm Aria, your support assistant 👋 How can I help?",
+  "fallbackDefault": "I'm not sure about that — let me connect you with a human agent!"
+}

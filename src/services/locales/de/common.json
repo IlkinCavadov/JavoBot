@@ -1,0 +1,76 @@
+{
+  "appName": "JavoBot",
+
+  "identity": "Identität",
+  "behavior": "Verhalten",
+  "knowledge": "Wissen",
+  "style": "Design",
+  "myBots": "Meine Bots",
+
+
+  "newBot": "Neuen Bot hinzufügen",
+  "resetBot": "Bot zurücksetzen",
+
+  
+  "botIdentity": "Bot-Identität",
+  "botName": "Bot-Name",
+  "companyBrand": "Firma / Marke",
+  "avatarEmoji": "Avatar-Emoji",
+
+  "messages": "Nachrichten",
+  "welcomeMessage": "Begrüßungsnachricht",
+  "fallbackMessage": "Fallback-Nachricht",
+
+  "personalityTone": "Persönlichkeitston",
+  "customInstructions": "Benutzerdefinierte Anweisungen",
+  "quickReplyChips": "Schnellantworten",
+  "options": "Optionen",
+
+  "collectEmail": "E-Mail vor dem Chat sammeln",
+  "showTyping": "Schreibanzeige anzeigen",
+  "humanHandoffKeyword": "Keyword für Mitarbeiter-Übergabe",
+
+  "qaPairs": "Frage-und-Antwort-Paare",
+  "question": "Frage",
+  "answer": "Antwort",
+  "remove": "Entfernen",
+  "addQaPair": "Frage-und-Antwort hinzufügen",
+
+  "businessContext": "Geschäftskontext",
+
+  "colors": "Farben",
+  "headerButtons": "Header & Buttons",
+  "userBubble": "Benutzer-Sprechblase",
+  "borderRadius": "Eckenradius",
+  "widgetPosition": "Widget-Position",
+
+  "bottomRight": "Unten rechts",
+  "bottomLeft": "Unten links",
+  "centered": "Zentriert",
+
+  "friendly": "Freundlich",
+  "professional": "Professionell",
+  "playful": "Verspielt",
+  "concise": "Kompakt",
+
+  "trackOrder": "Bestellung verfolgen",
+  "returnPolicy": "Rückgaberecht",
+  "contactSupport": "Support kontaktieren",
+  "businessHours": "Öffnungszeiten",
+  "pricing": "Preise",
+  "bookDemo": "Demo buchen",
+
+  "exportJson": "JSON exportieren",
+  "duplicate": "Duplizieren",
+  "delete": "Löschen",
+
+  "placeholderBotName": "Aria, Max, Zoe…",
+  "placeholderCompany": "Dein Unternehmen",
+  "placeholderInstructions": "z. B. Immer auf 30-Tage-Rückgabe hinweisen. Niemals über Konkurrenten sprechen.",
+  "placeholderHandoff": "mitarbeiter sprechen",
+  "placeholderBusinessContext": "Beschreibe dein Unternehmen, Produkte, Supportzeiten und Richtlinien…",
+  "inputPlaceholder": "Gib eine Nachricht ein…",
+
+  "welcomeDefault": "Hallo! Ich bin Aria, dein Support-Assistent 👋 Wie kann ich helfen?",
+  "fallbackDefault": "Ich bin mir nicht sicher — ich verbinde dich mit einem Mitarbeiter!"
+}

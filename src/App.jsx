@@ -1,7 +1,7 @@
 import "@/styles/global.css";
 
 import { Topbar }        from "@/components/layout/Topbar.jsx";
-import { BotList }       from "@/components/layout/BotList.jsx";
+
 import { ConfigSidebar } from "@/components/panels/ConfigSidebar.jsx";
 import { ChatPreview }   from "@/components/chat/ChatPreview.jsx";
 import { ExportPanel }   from "@/components/export/ExportPanel.jsx";
@@ -53,18 +53,13 @@ export default function App() {
 
       {/* Main content */}
       <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
-        {/* Saved bots list */}
-        <BotList
-          bots={bots}
-          activeId={activeId}
-          onSelect={selectBot}
-          onDuplicate={duplicateBot}
-          onDelete={deleteBot}
-          onExport={exportBot}
-        />
 
         {/* Config panels */}
-        <ConfigSidebar config={activeBot} handlers={configHandlers} />
+        <ConfigSidebar 
+          config={activeBot} 
+          handlers={configHandlers} 
+          botListProps={{ bots, activeId, onSelect: selectBot, onDuplicate: duplicateBot, onDelete: deleteBot, onExport: exportBot }}
+        />
 
         {/* Live preview (center) */}
         <main style={{

@@ -1,21 +1,22 @@
 import { useState } from "react";
 import { TABS } from "../../constants/index.js";
-import { IdentityPanel, BehaviorPanel, KnowledgePanel, StylePanel } from "./index.jsx";
+import { IdentityPanel, BehaviorPanel, KnowledgePanel, StylePanel, BotList } from "./index.jsx";
 
 const PANELS = {
   identity:  IdentityPanel,
   behavior:  BehaviorPanel,
   knowledge: KnowledgePanel,
   style:     StylePanel,
+  mybots: BotList
 };
 
-export function ConfigSidebar({ config, handlers }) {
+export function ConfigSidebar({ config, handlers, botListProps }) {
   const [activeTab, setActiveTab] = useState("identity");
   const Panel = PANELS[activeTab];
 
   return (
     <div style={{
-      width: 280, background: "var(--bg-card)", borderRight: "1px solid var(--border)",
+      width: 400, background: "var(--bg-card)", borderRight: "1px solid var(--border)",
       display: "flex", flexDirection: "column", overflowY: "auto",
       maxHeight: "calc(100vh - 52px)", flexShrink: 0,
     }}>
@@ -36,8 +37,11 @@ export function ConfigSidebar({ config, handlers }) {
       </div>
 
       {/* Panel body */}
-      <div style={{ padding: "18px 16px" }}>
-        <Panel config={config} h={handlers} />
+      <div style={{ padding: activeTab === "mybots" ? 0 : "18px 16px" }}>
+        {activeTab === "mybots"
+          ? <BotList {...botListProps} />
+          : <Panel config={config} h={handlers} />
+        }
       </div>
     </div>
   );

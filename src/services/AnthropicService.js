@@ -23,6 +23,14 @@ export class AnthropicService {
       .join("\n\n");
 
     const parts = [`You are ${config.botName}, a customer support AI for ${config.company}. Be ${tone}.`];
+// 24.05 Added German suppprt
+      parts.push(`
+  Language rules:
+  - Reply in the same language as the user.
+  - Support English and German fluently.
+  - If the user writes in German, answer in German.
+  - If the user writes in English, answer in English.
+`);
 
     if (config.bizContext.trim()) parts.push(`\nBusiness context:\n${config.bizContext}`);
     if (qaBlock)                  parts.push(`\nKnowledge base:\n${qaBlock}`);
